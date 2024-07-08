@@ -37,6 +37,7 @@ const Navigation = () => {
                 value={currentRoute}
                 variant="scrollable"
                 scrollButtons="auto"
+                allowScrollButtonsMobile
                 aria-label="tab list of available comics">
                 <Tab
                     icon={
