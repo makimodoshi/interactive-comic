@@ -1,39 +1,48 @@
-# Material UI - Vite.js in TypeScript example
+# interactive-comic
 
-## How to use
+*An interactive comic reader.*
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+## Maintenance
 
-<!-- #default-branch-switch -->
+To get started editing this repository:
 
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/next | tar -xz --strip=2 material-ui-next/examples/material-ui-vite-ts
-cd material-ui-vite-ts
-```
+1. Have [Git Bash](https://git-scm.com/downloads) and [NodeJS](https://nodejs.org/en/download/package-manager) installed on your computer
+2. Clone this repository to your computer with `git clone`
+3. With your favorite text editor (VSCode, IntelliJ IDEA, Notepad++, ...), open the repository
+4. Run the command `npm i` to install dependencies
+5. Run the command `npm run dev` to spin up the development server to see your local changes
+6. When you're ready to push your changes to GitHub, push to the `main` branch
+7. Update the `production` branch with what's on `main` through the command `git push origin main:production`
+8. The GitHub Actions workflow will build and deploy the website to `<username>.github.io/<repository-name>`
 
-Install it and run:
+## Files
 
-```bash
-npm install
-npm run dev
-```
+### `components`
 
-or:
+#### `InteractiveComic`
 
-<!-- #default-branch-switch -->
+Displays the reader for the current page.
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/next/examples/material-ui-vite-ts)
+#### `Navigation`
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/mui/material-ui/tree/next/examples/material-ui-vite-ts)
+The navbar and route hooks.
 
-## The idea behind the example
+### `data`
 
-This example uses [Vite.js](https://github.com/vitejs/vite).
-It includes `@mui/material` and its peer dependencies, including [Emotion](https://emotion.sh/docs/introduction), the default style engine in Material UI v5.
+The JSON data files contain the information for each comic, including page ID, image, available actions the player can take, and what flags should be set for certain actions to appear.
 
-## What's next?
+### `types.d.ts`
 
-<!-- #default-branch-switch -->
+Type declarations used to parse the data files, and add type safety for custom theme variables defined in `theme.tsx`
 
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://next.mui.com/material-ui/getting-started/templates/) section.
+### `pages`
+
+Contains the top level component served at each route.
+
+### `main.tsx`
+
+The root component which contains the route tree.
+
+---
+
+*Created with the [Material UI + Vite.js](https://github.com/mui/material-ui/tree/next/examples/material-ui-vite-ts) template*
