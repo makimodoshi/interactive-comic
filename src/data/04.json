@@ -1,0 +1,953 @@
+{
+  "pages": [
+    {
+      "id": "P00",
+      "image": "./04/P00.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Start!",
+          "destinationId": "P01"
+        }
+      ]
+    },
+    {
+      "id": "P01",
+      "image": "./04/P01.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P02"
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "image": "./04/P02.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P03"
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "image": "./04/P03.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P04_0"
+        }
+      ]
+    },
+    {
+      "id": "P04_0",
+      "image": "./04/P04_0.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P05"
+        }
+      ],
+      "imageAction": {
+        "type": "click",
+        "imageWidth": 814,
+        "imageHeight": 4139,
+        "x": "27%",
+        "y": "83%",
+        "width": "15%",
+        "height": "3%",
+        "tooltip": "Hmmm?",
+        "destinationId": "P04_2_2"
+      }
+    },
+    {
+      "id": "P05",
+      "image": "./04/P05.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "Deduce",
+          "destinationId": "P10"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P06"
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "image": "./04/P06.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P07"
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "image": "./04/P07.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "Wait in Saruyama-san's room",
+          "destinationId": "P08"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Tail someone besides Saruyama-san",
+          "destinationId": "P09"
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "image": "./04/P08.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Retry!!",
+          "destinationId": "P07",
+          "requiredFlags": [
+            {
+              "flag": "seen09",
+              "flagValue": false
+            }
+          ],
+          "setFlag": "seen08"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Retry!!",
+          "destinationId": "P10",
+          "requiredFlags": [
+            {
+              "flag": "seen09",
+              "flagValue": true
+            }
+          ],
+          "setFlag": "seen08"
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "image": "./04/P09.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Retry!!",
+          "destinationId": "P07",
+          "requiredFlags": [
+            {
+              "flag": "seen08",
+              "flagValue": false
+            }
+          ],
+          "setFlag": "seen09"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Retry!!",
+          "destinationId": "P10",
+          "requiredFlags": [
+            {
+              "flag": "seen08",
+              "flagValue": true
+            }
+          ],
+          "setFlag": "seen09"
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "image": "./04/P10.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P11"
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "image": "./04/P11.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "A) The owner, Momota Jiro",
+          "destinationId": "P12"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "B) Inui",
+          "destinationId": "P13"
+        },
+        {
+          "type": "button",
+          "color": "pink",
+          "label": "C) Yukiji",
+          "destinationId": "P15"
+        },
+        {
+          "type": "button",
+          "color": "green",
+          "label": "D) That boy might know something",
+          "destinationId": "P16"
+        },
+        {
+          "type": "button",
+          "color": "yellow",
+          "label": "E) Heard everyone's stories. Move on.",
+          "destinationId": "P17",
+          "requiredFlags": [
+            {
+              "flag": "seen12",
+              "flagValue": true
+            },
+            {
+              "flag": "seen14",
+              "flagValue": true
+            },
+            {
+              "flag": "seen15",
+              "flagValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "image": "./04/P12.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P11",
+          "setFlag": "seen12"
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "image": "./04/P13.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P11",
+          "requiredFlags": [
+            {
+              "flag": "seen16",
+              "flagValue": false
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P14",
+          "requiredFlags": [
+            {
+              "flag": "seen16",
+              "flagValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P14",
+      "image": "./04/P14.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P11",
+          "setFlag": "seen14"
+        }
+      ]
+    },
+    {
+      "id": "P15",
+      "image": "./04/P15.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P11",
+          "setFlag": "seen15"
+        }
+      ]
+    },
+    {
+      "id": "P16",
+      "image": "./04/P16.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P11",
+          "setFlag": "seen16"
+        }
+      ]
+    },
+    {
+      "id": "P17",
+      "image": "./04/P17.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P18"
+        }
+      ]
+    },
+    {
+      "id": "P18",
+      "image": "./04/P18.jpg",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "Check under the bed with Kogoro",
+          "destinationId": "P19"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Check near Saruyama-san's hand with Ran",
+          "destinationId": "P20"
+        },
+        {
+          "type": "button",
+          "color": "pink",
+          "label": "Check the murder weapon with Conan",
+          "destinationId": "P22"
+        },
+        {
+          "type": "button",
+          "color": "green",
+          "label": "Checked everything. Move on.",
+          "destinationId": "P23",
+          "requiredFlags": [
+            {
+              "flag": "seen21",
+              "flagValue": true
+            },
+            {
+              "flag": "seen22",
+              "flagValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P19",
+      "image": "./04/P19.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P18",
+          "setFlag": "seen19"
+        }
+      ]
+    },
+    {
+      "id": "P20",
+      "image": "./04/P20.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P18",
+          "requiredFlags": [
+            {
+              "flag": "seen19",
+              "flagValue": false
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P21",
+          "requiredFlags": [
+            {
+              "flag": "seen19",
+              "flagValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P21",
+      "image": "./04/P21.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P18",
+          "setFlag": "seen21"
+        }
+      ]
+    },
+    {
+      "id": "P22",
+      "image": "./04/P22.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P18",
+          "setFlag": "seen22"
+        }
+      ]
+    },
+    {
+      "id": "P23",
+      "image": "./04/P23.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P24"
+        }
+      ]
+    },
+    {
+      "id": "P24",
+      "image": "./04/P24.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "C) Yukiji",
+          "destinationId": "P28"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "A) Momota Jiro, the owner",
+          "destinationId": "P32"
+        },
+        {
+          "type": "button",
+          "color": "green",
+          "label": "B) Inui",
+          "destinationId": "P25"
+        }
+      ]
+    },
+    {
+      "id": "P28",
+      "image": "./04/P28.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "Just a hunch!",
+          "destinationId": "P29"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Because you're right-handed!",
+          "destinationId": "P30"
+        }
+      ]
+    },
+    {
+      "id": "P29",
+      "image": "./04/P29.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P28"
+        }
+      ]
+    },
+    {
+      "id": "P30",
+      "image": "./04/P30.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "Oh right! Whoops!",
+          "destinationId": "P24"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "No it isn't!",
+          "destinationId": "P31"
+        }
+      ]
+    },
+    {
+      "id": "P31",
+      "image": "./04/P31.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P24"
+        }
+      ]
+    },
+    {
+      "id": "P25",
+      "image": "./04/P25.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "Just a hunch!",
+          "destinationId": "P26"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Because you're right-handed!",
+          "destinationId": "P27"
+        }
+      ]
+    },
+    {
+      "id": "P26",
+      "image": "./04/P26.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P25"
+        }
+      ]
+    },
+    {
+      "id": "P27",
+      "image": "./04/P27.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P24"
+        }
+      ]
+    },
+    {
+      "id": "P32",
+      "image": "./04/P32.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "Just a hunch!",
+          "destinationId": "P33"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Because you're right-handed!",
+          "destinationId": "P34"
+        }
+      ]
+    },
+    {
+      "id": "P33",
+      "image": "./04/P33.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P32"
+        }
+      ]
+    },
+    {
+      "id": "P34",
+      "image": "./04/P34.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "Oh right! Whoops!",
+          "destinationId": "P24"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "I have proof that you're the culprit!",
+          "destinationId": "P35"
+        }
+      ]
+    },
+    {
+      "id": "P35",
+      "image": "./04/P35.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "Gut instinct!",
+          "destinationId": "P36"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "You're actually right-handed",
+          "destinationId": "P37"
+        },
+        {
+          "type": "button",
+          "color": "green",
+          "label": "It's the dying message",
+          "destinationId": "P38"
+        }
+      ]
+    },
+    {
+      "id": "P36",
+      "image": "./04/P36.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P35"
+        }
+      ]
+    },
+    {
+      "id": "P37",
+      "image": "./04/P37.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P35"
+        }
+      ]
+    },
+    {
+      "id": "P38",
+      "image": "./04/P38.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P39"
+        }
+      ]
+    },
+    {
+      "id": "P39",
+      "image": "./04/P39.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "A) Inui",
+          "destinationId": "P40"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "B) Yukiji",
+          "destinationId": "P41"
+        },
+        {
+          "type": "button",
+          "color": "pink",
+          "label": "C) Ran",
+          "destinationId": "P42"
+        },
+        {
+          "type": "button",
+          "color": "green",
+          "label": "D) Another guest",
+          "destinationId": "P45"
+        },
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "E) Hattori Heiji",
+          "destinationId": "P43"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "F) Kaitou Kid",
+          "destinationId": "P44"
+        },
+        {
+          "type": "button",
+          "color": "pink",
+          "label": "G) Aoyama",
+          "destinationId": "P45"
+        },
+        {
+          "type": "button",
+          "color": "green",
+          "label": "H) Kimura",
+          "destinationId": "P45"
+        },
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "I) Momota's wife",
+          "destinationId": "P45"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "J) Momota's friend",
+          "destinationId": "P45"
+        },
+        {
+          "type": "button",
+          "color": "pink",
+          "label": "K) Momota's twin",
+          "destinationId": "P46"
+        },
+        {
+          "type": "button",
+          "color": "green",
+          "label": "L) Momota's dad",
+          "destinationId": "P45"
+        },
+        {
+          "type": "button",
+          "color": "orange",
+          "label": "M) Momota's mom",
+          "destinationId": "P45"
+        },
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "N) Momota's daughter",
+          "destinationId": "P45"
+        }
+      ]
+    },
+    {
+      "id": "P40",
+      "image": "./04/P40.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P39"
+        }
+      ]
+    },
+    {
+      "id": "P41",
+      "image": "./04/P41.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P39"
+        }
+      ]
+    },
+    {
+      "id": "P42",
+      "image": "./04/P42.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P39"
+        }
+      ]
+    },
+    {
+      "id": "P43",
+      "image": "./04/P43.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P39"
+        }
+      ]
+    },
+    {
+      "id": "P44",
+      "image": "./04/P44.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P39"
+        }
+      ]
+    },
+    {
+      "id": "P45",
+      "image": "./04/P45.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P39"
+        }
+      ]
+    },
+    {
+      "id": "P46",
+      "image": "./04/P46.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P47"
+        }
+      ]
+    },
+    {
+      "id": "P47",
+      "image": "./04/P47.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Retry",
+          "destinationId": "P01"
+        }
+      ]
+    },
+    {
+      "id": "P04_2_2",
+      "image": "./04/P04_2_2.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P48"
+        }
+      ]
+    },
+    {
+      "id": "P48",
+      "image": "./04/P48.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P49"
+        }
+      ]
+    },
+    {
+      "id": "P49",
+      "image": "./04/P49.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P50"
+        }
+      ]
+    },
+    {
+      "id": "P50",
+      "image": "./04/P50.png",
+      "actionData": [
+        {
+          "type": "button",
+          "color": "blue",
+          "label": "Next",
+          "destinationId": "P51"
+        }
+      ]
+    },
+    {
+      "id": "P51",
+      "image": "./04/P51.png",
+      "actionData": [
+        {
+          "type": "end",
+          "label": "THE END"
+        }
+      ]
+    }
+  ],
+  "flags": {
+    "seen08": false,
+    "seen09": false,
+    "seen12": false,
+    "seen14": false,
+    "seen15": false,
+    "seen16": false,
+    "seen19": false,
+    "seen21": false,
+    "seen22": false
+  }
+}
